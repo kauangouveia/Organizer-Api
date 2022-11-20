@@ -1,9 +1,11 @@
-import express from 'express';
+import express from "express";
+import route from "./routes/public/index";
+import cors from "cors"
 
 const app = express();
 
-app.get("/", (req, res) => {
-    return res.json({ message: "Hello Worlde" })
-})
+app.use(express.json());
+app.use(cors())
+app.use(route)
 
-app.listen(3333)
+export default app;
