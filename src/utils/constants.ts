@@ -9,3 +9,7 @@ export const DATABASE = {
     DIALECT: process.env.DATABASE_DIALECT || ""
 }
 
+
+export const TOKEN ={
+    SECRET : process.env.TOKEN_SECRET
+}
